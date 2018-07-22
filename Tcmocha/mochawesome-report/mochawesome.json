@@ -1,0 +1,79 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-07-22T02:30:31.727Z",
+    "end": "2018-07-22T02:30:32.666Z",
+    "duration": 939,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "2b312ccb-ac5b-4306-bb5d-9d5649892290",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "6f7b982a-b1d2-41ff-9b17-4b38e2b01dc6",
+        "title": "test suit",
+        "fullFile": "D:\\Tcmocha\\test\\apptest.js",
+        "file": "\\test\\apptest.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Verify all expected attributes available",
+            "fullTitle": "test suit Verify all expected attributes available",
+            "timedOut": false,
+            "duration": 923,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "server\n.get(\"/api/users?page=3\")\n.expect(200)\n.end(function(err,res){\n    if(!err){\n        //console.log(res.body);\n        chai.expect(res.body).to.have.haveOwnProperty('page');\n        chai.expect(res.body).to.have.haveOwnProperty('per_page');\n        chai.expect(res.body).to.have.haveOwnProperty('total');\n        chai.expect(res.body).to.have.haveOwnProperty('total_pages');\n        chai.expect(res.body.data[0].id).to.equal(7);\n        var fName= res.body.data[0].first_name;\n        chai.assert.isString(fName,'FirstnameisString');\n        /*var bodyLength=chai.res.body.length;\n        for (var i = 0; i < bodyLength; i++) {\n            var fName= res.body.data[i].first_name;\n           chai.assert.isString(fName,'FirstnameisString');*/\n            \n\n\ndone();\n    }\n    else\n     console.log(err);\n    \n})",
+            "err": {},
+            "isRoot": false,
+            "uuid": "9aa799b4-3426-4f34-a305-fa922889d6eb",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "9aa799b4-3426-4f34-a305-fa922889d6eb"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 923,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 99900
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}
